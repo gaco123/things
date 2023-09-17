@@ -72,7 +72,7 @@ def commit_hash():
 
 
 def run(command, desc=None, errdesc=None, custom_env=None, live=False):
-    if desc is not None:
+    #if desc is not None:
         #print(desc)
 
     if live:
