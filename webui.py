@@ -117,8 +117,9 @@ def check_versions():
 
     expected_torch_version = "2.0.0"
 
-    if version.parse(torch.__version__) < version.parse(expected_torch_version):
-        errors.#print_error_explanation(f"""
+    #if version.parse(torch.__version__) < version.parse(expected_torch_version):
+        #errors.print_error_explanation(f
+        """
 You are running torch {torch.__version__}.
 The program is tested to work with torch {expected_torch_version}.
 To reinstall the desired version, run with commandline flag --reinstall-torch.
@@ -132,8 +133,9 @@ Use --skip-version-check commandline argument to disable this check.
     if shared.xformers_available:
         import xformers
 
-        if version.parse(xformers.__version__) < version.parse(expected_xformers_version):
-            errors.#print_error_explanation(f"""
+        #if version.parse(xformers.__version__) < version.parse(expected_xformers_version):
+            #errors.print_error_explanation(f
+            """
 You are running xformers {xformers.__version__}.
 The program is tested to work with xformers {expected_xformers_version}.
 To reinstall the desired version, run with commandline flag --reinstall-xformers.
@@ -223,15 +225,15 @@ def initialize():
 
     if cmd_opts.tls_keyfile is not None and cmd_opts.tls_keyfile is not None:
 
-        try:
-            if not os.path.exists(cmd_opts.tls_keyfile):
+        #try:
+            #if not os.path.exists(cmd_opts.tls_keyfile):
                 #print("Invalid path to TLS keyfile given")
-            if not os.path.exists(cmd_opts.tls_certfile):
+            #if not os.path.exists(cmd_opts.tls_certfile):
                 #print(f"Invalid path to TLS certfile: '{cmd_opts.tls_certfile}'")
-        except TypeError:
-            cmd_opts.tls_keyfile = cmd_opts.tls_certfile = None
+        #except TypeError:
+            #cmd_opts.tls_keyfile = cmd_opts.tls_certfile = None
             #print("TLS setup invalid, running webui without TLS")
-        else:
+        #else:
             #print("Running with TLS")
         startup_timer.record("TLS")
 
