@@ -198,11 +198,11 @@ def run_extension_installer(extension_dir):
 def list_extensions(settings_file):
     settings = {}
 
-    try:
-        if os.path.isfile(settings_file):
-            with open(settings_file, "r", encoding="utf8") as file:
-                settings = json.load(file)
-    except Exception as e:
+    #try:
+    if os.path.isfile(settings_file):
+        with open(settings_file, "r", encoding="utf8") as file:
+            settings = json.load(file)
+    #except Exception as e:
         #print(e, file=sys.stderr)
 
     disabled_extensions = set(settings.get('disabled_extensions', []))
