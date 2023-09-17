@@ -40,7 +40,8 @@ def check_python_version():
     if not (major == 3 and minor in supported_minors):
         import modules.errors
 
-        modules.errors.#print_error_explanation(f"""
+        modules.errors.#print_error_explanation(f
+"""
 INCOMPATIBLE PYTHON VERSION
 
 This program is tested with 3.10.6 Python, but you have {major}.{minor}.{micro}.
@@ -54,8 +55,7 @@ You can download 3.10 Python from here: https://www.python.org/downloads/release
 {"Alternatively, use a binary release of WebUI: https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases" if is_windows else ""}
 
 Use --skip-python-version-check to suppress this warning.
-""")
-
+"""
 
 def commit_hash():
     global stored_commit_hash
